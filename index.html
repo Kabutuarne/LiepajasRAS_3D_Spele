@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Liepājas RAS Spēle</title>
+
+    <script src="playcanvas-stable.min.js"></script>
+    <script src="__settings__.js"></script>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Saglabā 16:10 attiecību, bet arī garantē, ka viss paliek centrēts */
+        #game-container {
+            position: relative;
+            background: #000;
+
+            aspect-ratio: 16 / 10;
+
+            width: min(100vw, calc(100vh * 1.6));
+            height: min(100vh, calc(100vw / 1.6));
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        #application-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="application-canvas"></canvas>
+    </div>
+
+    <script src="__modules__.js"></script>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+</body>
+</html>
+
+
+<!-- Spēles ievietošana mājaslapā.
+Ieteicamas 16:10 dimensijas spēles logam, lai izskatītos pareizi -->
+<!-- <iframe 
+    src="Eko_Misija/index.html" 
+    style="width: 100%; max-width: 960px; height: 600px; border: none;">
+</iframe> -->
